@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="appBg">#001E2B</color>
+    <color name="fonts">#68FFEE</color>
+    <color name="upperTextBg">#00293A</color>
+    <color name="statusBar">#00293A</color>
+    <color name="splashStatusBarColor">#001E2B</color>
+</resources>

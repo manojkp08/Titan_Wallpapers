@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086085082775",
+    "project_id": "titan-d8d66",
+    "storage_bucket": "titan-d8d66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086085082775:android:0fa56656de1cfa891dc3d2",
+        "android_client_info": {
+          "package_name": "com.example.amoledwallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086085082775-268v34vfuc9gt1bfqov9e3t00dp0div0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8x4lrI0OrWOt71_iGbMsQjEAwdL2iCnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086085082775-268v34vfuc9gt1bfqov9e3t00dp0div0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

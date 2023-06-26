@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AmoledWallpaper" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.AmoledWallpaper" parent="Base.Theme.AmoledWallpaper" />
+
+    <style name="NavigationBarStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@drawable/bottom_nav_background</item>
+    </style>
+</resources>

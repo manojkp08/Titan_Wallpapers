@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBg"
+    tools:context=".wallpaperFirebase.Fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="30dp"
+                    android:background="@color/upperTextBg"
+                    android:gravity="center_vertical"
+                    tools:ignore="TextSizeCheck">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/bebas_neue"
+                        android:text="@string/amoled_wallpaper"
+                        android:textColor="@color/fonts"
+                        android:textSize="29sp"
+                        tools:ignore="RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bestOfTheMonth"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fonts"
+                        android:fontFamily="@font/bebas_neue"
+                        android:textSize="18sp"
+                        android:text="Best of the Month"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/theColorTone"
+                    android:layout_below="@id/bestOfTheMonth"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fonts"
+                        android:fontFamily="@font/bebas_neue"
+                        android:textSize="18sp"
+                        android:text="@string/the_color_tone"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_tct"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/category"
+                    android:layout_below="@id/theColorTone"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_width="match_parent"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fonts"
+                        android:fontFamily="@font/bebas_neue"
+                        android:textSize="18sp"
+                        android:text="Categories"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_cat"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>
