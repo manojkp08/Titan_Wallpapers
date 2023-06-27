@@ -75,7 +75,9 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragmentReplace, fragment)
         transaction.commit()
-//        The main problem in this code is that our fragments will overlap each other
+
+//        The main problem in this code is that our fragments will overlap each other. That's why we are
+        //not using this code.
 //        supportFragmentManager.beginTransaction().add(R.id.fragmentReplace, fragment).commit()
     }
 }
