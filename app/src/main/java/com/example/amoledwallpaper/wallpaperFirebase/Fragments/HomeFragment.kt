@@ -1,6 +1,7 @@
 package com.example.amoledwallpaper.wallpaperFirebase.Fragments
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.text.Layout
@@ -16,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.amoledwallpaper.R
 import com.example.amoledwallpaper.databinding.FragmentHomeBinding
 import com.example.amoledwallpaper.databinding.ItemBestofthemonthBinding
@@ -80,16 +82,28 @@ class HomeFragment : Fragment() {
         }
 
         db.collection("categories").addSnapshotListener{ value, error ->
-
             val listOfCategory = arrayListOf<CategoryModel>()
             val data = value?.toObjects(CategoryModel::class.java)
             listOfCategory.addAll(data!!)
-
             binding.rcvCat.layoutManager = GridLayoutManager(requireContext(), 2)
             binding.rcvCat.adapter = CategoryAdapter(requireContext(), listOfCategory)
-
         }
 
         return binding.root
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // Update the layout manager span count based on the new configuration
+        val layoutManagerRcvBom = binding.rcvBom.layoutManager as LinearLayoutManager
+        layoutManagerRcvBom.orientation = LinearLayoutManager.HORIZONTAL
+
+        val layoutManagerColortone = binding.rcvTct.layoutManager as GridLayoutManager
+        layoutManagerColortone.spanCount = 5
+        layoutManagerColortone.orientation = GridLayoutManager.HORIZONTAL
+
+        val layoutManagerCategory = binding.rcvCat.layoutManager as GridLayoutManager
+        layoutManagerCategory.spanCount = 3
+        layoutManagerCategory.orientation = GridLayoutManager.VERTICAL
     }
 }

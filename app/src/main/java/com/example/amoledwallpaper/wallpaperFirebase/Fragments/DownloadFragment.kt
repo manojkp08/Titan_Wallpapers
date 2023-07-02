@@ -42,6 +42,7 @@ package com.example.amoledwallpaper.wallpaperFirebase.Fragments
 //    }
 //}
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Environment
 import androidx.fragment.app.Fragment
@@ -50,6 +51,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.amoledwallpaper.databinding.FragmentDownloadBinding
 import com.example.amoledwallpaper.wallpaperFirebase.Adapter.ImageListAdapter
 import java.io.File
@@ -79,4 +81,12 @@ class DownloadFragment : Fragment() {
         val targetFile = File(targetPath)
         return targetFile.listFiles()?.toList() ?: emptyList()
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        // Update the layout manager span count based on the new configuration
+        val layoutManager = binding.rcvDownloaded.layoutManager as StaggeredGridLayoutManager
+        layoutManager.spanCount = 2
+    }
+
 }

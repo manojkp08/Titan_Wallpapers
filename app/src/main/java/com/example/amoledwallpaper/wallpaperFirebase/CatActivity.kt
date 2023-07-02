@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.amoledwallpaper.R
 import com.example.amoledwallpaper.databinding.ActivityCatBinding
 import com.example.amoledwallpaper.wallpaperFirebase.Adapter.CatImageAdapter
-import com.example.amoledwallpaper.wallpaperFirebase.Model.BomModel
 import com.example.amoledwallpaper.wallpaperFirebase.Model.WallpaperCatModel
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -32,6 +31,7 @@ class CatActivity : AppCompatActivity() {
         val uid = intent.getStringExtra("uid")//Key Abstract
         val name = intent.getStringExtra("name")//Category name
 
+
         db.collection("categories").document(uid!!).collection("wallpaper")
             .addSnapshotListener { value, error ->
 
@@ -42,9 +42,13 @@ class CatActivity : AppCompatActivity() {
                 binding.catTitle.text = name.toString()
                 binding.catCount.text = "${listOfCatWallpaper.size} Wallpaper Available"
 
-                binding.catRcv.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                 binding.catRcv.adapter = CatImageAdapter(this, listOfCatWallpaper)
-            }
 
+                val layoutManager =
+                    StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                layoutManager.gapStrategy =
+                    StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
+                binding.catRcv.layoutManager = layoutManager
+            }
     }
 }

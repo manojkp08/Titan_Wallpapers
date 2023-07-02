@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBg"
+    tools:context=".wallpaperFirebase.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentReplace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomnavBar"
+        style="@style/NavigationBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <FrameLayout
+            android:id="@+id/homefl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ic_home"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/home"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/downloadfl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ic_download"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/download"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

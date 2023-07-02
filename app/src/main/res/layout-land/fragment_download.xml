@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBg"
+    tools:context=".wallpaperFirebase.Fragments.DownloadFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="30dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/upperTextBg"
+            android:gravity="center_vertical"
+            tools:ignore="TextSizeCheck">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/bebas_neue"
+                android:text="@string/downloaded"
+                android:textColor="@color/fonts"
+                android:textSize="29sp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDownloaded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

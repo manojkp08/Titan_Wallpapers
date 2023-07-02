@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/appBg"
+    tools:context=".wallpaperFirebase.WallpaperFinal">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottomnavBar"
+                android:layout_marginBottom="40dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/appBg"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/final_wallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@id/bottomnavBar"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottomnavBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <FrameLayout
+            android:id="@+id/homefl"
+            android:layout_width="match_parent"
+            style="@style/NavigationBarStyle"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_SetWallpaper"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gallery"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/downloadfl"
+            android:layout_width="match_parent"
+            style="@style/NavigationBarStyle"
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_Download"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:background="@drawable/download"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
